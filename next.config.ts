@@ -5,3 +5,13 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/
+});
+
+/** @type {import('next').NextConfig} */
+module.exports = withMDX({
+  experimental: { appDir: true },
+  pageExtensions: ["ts", "tsx", "mdx"]
+});
