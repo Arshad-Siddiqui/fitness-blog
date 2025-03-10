@@ -15,12 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
+      <body className="flex">
         <Sidebar />
-        <main>
-        {children}
-        </main>
+        <div className="right-side grow">
+          <Header />
+          <main>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

@@ -13,10 +13,10 @@ const posts: { title: string; date: string; description: string; }[] = [
 
 export default function Posts() {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto">
       {posts.map((post) => (
-        <div key={post.title} className="bg-white shadow-md p-2 mb-2">
-          <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
+        <div key={post.title} className="border-4 p-2 mb-2">
+          <h1 className="text-2xl font-bold mb-1">{post.title}</h1>
           <p className="text-gray-700">{post.description}</p>
           <p>{post.date}</p>
         </div>
