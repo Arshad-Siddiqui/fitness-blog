@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./header";
+import Sidebar from "./sidebar";
 
 export const metadata: Metadata = {
   title: "Paper Fitness",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
+        <Sidebar />
         <main>
         {children}
         </main>
