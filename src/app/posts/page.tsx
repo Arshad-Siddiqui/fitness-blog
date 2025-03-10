@@ -13,7 +13,7 @@ const posts: { title: string; date: string; description: string; }[] = [
 
 export default function Posts() {
   return (
-    <div className="container mx-auto p-4 mt-16">
+    <main className="container mx-auto p-4">
       {posts.map((post) => (
         <div key={post.title} className="bg-white shadow-md p-2 mb-2">
           <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
@@ -21,6 +21,6 @@ export default function Posts() {
           <p>{post.date}</p>
         </div>
       ))}
-    </div>
+    </main>
   );
 }
