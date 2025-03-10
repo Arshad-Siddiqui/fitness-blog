@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-      <main className="flex justify-center">
+      <div className="flex justify-center">
       clean slate
-      </main>
+      </div>
   );
 }
