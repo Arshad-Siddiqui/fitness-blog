@@ -4,9 +4,9 @@ let posts = getPosts()
 
 export default function Posts() {
   return (
-    <div className="posts-container">
+    <div className="posts-container space-y">
       {posts.map((post) => (
-        <div key={post.title} className="border-2 p-2">
+        <div key={post.title} className="border-b-2 p-2">
           <h1 className="text-2xl font-bold mb-1">{post.title}</h1>
           <p>{post.date}</p>
         </div>
