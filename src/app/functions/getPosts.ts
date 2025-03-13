@@ -18,6 +18,7 @@ export default function getPosts() {
 
     return {
       filename,
+      slug: filename.replace(".mdx", ""),
       title: module.title, // Metadata
       date: module.date,
     };
