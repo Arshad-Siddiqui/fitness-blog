@@ -1,11 +1,7 @@
-import path from "path";
-
-const postsDirectory = "../../../../content"
+import getContent from "@/app/functions/getContent";
 
 export default function Post({ params }: { params: { slug: string } }) {
-  const postPath = path.join(postsDirectory, `${params.slug}.mdx`);
-
-  const PostComponent = require(postPath).default;
+  const PostComponent = getContent(params.slug)
 
   return (
     <article>
