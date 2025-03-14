@@ -1,7 +1,9 @@
 import getContent from "@/app/functions/getContent";
 
-export default function Post({ params }: { params: { slug: string } }) {
-  const PostComponent = getContent(params.slug)
+export default async function Post({ params }: { params: { slug: string } }) {
+  // Made asynchronous to not upset Next JS stomach
+  const { slug } = await params
+  const PostComponent = getContent(slug)
 
   return (
     <article>
