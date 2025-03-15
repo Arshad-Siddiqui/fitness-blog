@@ -6,7 +6,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const PostComponent = getContent(slug)
 
   return (
-    <article>
+    <article className="ml-1">
       <PostComponent />
     </article>
   );
