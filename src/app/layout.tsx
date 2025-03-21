@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./header";
-import Sidebar from "./sidebar";
 
 export const metadata: Metadata = {
   title: "Paper Fitness",
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex">
-        <Sidebar />
         <div className="right-side grow">
           <Header />
           <main>
