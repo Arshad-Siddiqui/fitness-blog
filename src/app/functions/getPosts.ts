@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 
-type Post = { filename: string, title: string, date: string, category: string }
+type Post = { filename: string, slug: string, title: string, date: string, category: string }
 
 // postsDirectory is the absolute path to /contents
 const postsDirectory = path.join(process.cwd(), '/content');
 
-export default function getPosts(): Post[] {
+export function getPosts(): Post[] {
   // Gets all file names from that directory
   const filenames = fs.readdirSync(postsDirectory);
 

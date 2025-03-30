@@ -1,4 +1,4 @@
-import getPosts from "../functions/getPosts";
+import { getPosts } from "../functions/getPosts";
 import Link from "next/link";
 
 let posts = getPosts()
