@@ -6,7 +6,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const PostComponent = getContent(slug);
 
   return (
-    <article className="mx-auto max-w-prose p-4">
+    <article className="mx-auto max-w-prose p-4 border-2 border-black-500 mt-2">
       <PostComponent />
     </article>
   );
