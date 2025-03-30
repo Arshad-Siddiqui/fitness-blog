@@ -2,11 +2,11 @@ import getContent from "@/app/functions/getContent";
 
 export default async function Post({ params }: { params: { slug: string } }) {
   // Made asynchronous to not upset Next JS stomach
-  const { slug } = await params
-  const PostComponent = getContent(slug)
+  const { slug } = await params;
+  const PostComponent = getContent(slug);
 
   return (
-    <article className="ml-1">
+    <article className="mx-auto max-w-prose p-4">
       <PostComponent />
     </article>
   );
