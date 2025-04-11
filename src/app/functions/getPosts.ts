@@ -4,7 +4,7 @@ import path from 'path';
 type Post = { filename: string, slug: string, title: string, date: string, category: string }
 
 // postsDirectory is the absolute path to /contents
-const postsDirectory = path.join(process.cwd(), '/content');
+const postsDirectory = path.join(process.cwd(), '/public/content');
 
 export function getPosts(): Post[] {
   // Gets all file names from that directory
@@ -12,7 +12,7 @@ export function getPosts(): Post[] {
 
   // Returns an array of objects containing metadata of file
   return filenames.map((filename) => {
-    const module = require(`../../../content/${filename}`); // Dynamically import
+    const module = require(`../../../public/content/${filename}`); // Dynamically import
     
     if (!module.title || !module.date || !module.contentType) {
       console.log(`Missing title, date or content type in file: ${filename}`);
